@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #fff6f6 0%, #fff0f0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculadora {
+    width: 380px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.display-container {
+    background-color: #2d2d2d;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-align: right;
+    border-radius: 10px;
+    border: 2px solid #333;
+    padding: 15px;
+    font-weight: bold;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.botoes-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tecla {
+    padding: 20px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tecla:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tecla:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tecla-numero {
+    background-color: #404040;
+    color: #ffffff;
+}
+
+.tecla-numero:hover {
+    background-color: #505050;
+}
+
+.tecla-operacao {
+    background-color: #ff8400;
+    color: #ffffff;
+}
+
+
+.tecla-igual {
+    background-color: #14a2bc;
+    color: #ffffff;
+    grid-column: span 1;
+}
+
+
+.tecla-zero {
+    grid-column: span 2;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .calculadora {
+        width: 90vw;
+        max-width: 380px;
+        padding: 15px;
+    }
+    
+    .display {
+        font-size: 2rem;
+        height: 70px;
+    }
+    
+    .tecla {
+        padding: 18px;
+        font-size: 1.1rem;
+    }
+}
